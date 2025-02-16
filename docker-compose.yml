@@ -1,21 +1,6 @@
-services:
-  #  node_exporter:
-  #    image: harbor.devvops.ir/pub-repo/prom/node-exporter:v1.8.2
-  #    container_name: node_exporter
-  #    command: '--path.rootfs=/host'
-  #    pid: host
-  #    restart: unless-stopped
-  #    volumes:
-  #      - '/:/host:ro,rslave'
-  #    network_mode: "host"
-  #    deploy:
-  #      resources:
-  #        limits:
-  #          cpus: "0.2"
-  #          memory: "500M"
-  #
+
   cadvisor: 
-    image: harbor.devvops.ir/pub-repo/cadvisor-health:latest
+    image: hosseinasgari/cadvisor-health:latest
     container_name: cadvisor1
     restart: unless-stopped
     entrypoint: sh /code/run.sh
